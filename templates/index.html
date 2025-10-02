@@ -21,7 +21,6 @@
         <td>{{ e.estadio }}</td>
         <td>{{ e.entrenador }}</td>
         <td>
-          <a class="button is-small" href="{{ url_for('show_equipo', id=e.id) }}">Ver</a>
           <a class="button is-small is-warning" href="{{ url_for('edit_equipo', id=e.id) }}">Editar</a>
           <form style="display:inline" method="post" action="{{ url_for('delete_equipo', id=e.id) }}">
             <button class="button is-small is-danger" type="submit" onclick="return confirm('¿Eliminar?')">Eliminar</button>
