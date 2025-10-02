@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2 class="subtitle">Editar {{ equipo.nombre }}</h2>
+  <form method="post">
+    <div class="field">
+      <label class="label">Nombre</label>
+      <div class="control"><input class="input" name="nombre" value="{{ equipo.nombre }}" required></div>
+    </div>
+    <div class="field">
+      <label class="label">Ciudad</label>
+      <div class="control"><input class="input" name="ciudad" value="{{ equipo.ciudad }}"></div>
+    </div>
+    <div class="field">
+      <label class="label">Estadio</label>
+      <div class="control"><input class="input" name="estadio" value="{{ equipo.estadio }}"></div>
+    </div>
+    <div class="field">
+      <label class="label">Entrenador</label>
+      <div class="control"><input class="input" name="entrenador" value="{{ equipo.entrenador }}"></div>
+    </div>
+    <div class="control">
+      <button class="button is-primary" type="submit">Guardar</button>
+      <a class="button" href="{{ url_for('show_equipo', id=equipo.id) }}">Cancelar</a>
+    </div>
+  </form>
+{% endblock %}

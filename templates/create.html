@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2 class="subtitle">Crear equipo</h2>
+  <form method="post">
+    <div class="field">
+      <label class="label">Nombre</label>
+      <div class="control">
+        <input class="input" name="nombre" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Ciudad</label>
+      <div class="control"><input class="input" name="ciudad"></div>
+    </div>
+    <div class="field">
+      <label class="label">Estadio</label>
+      <div class="control"><input class="input" name="estadio"></div>
+    </div>
+    <div class="field">
+      <label class="label">Entrenador</label>
+      <div class="control"><input class="input" name="entrenador"></div>
+    </div>
+    <div class="control">
+      <button class="button is-primary" type="submit">Crear</button>
+      <a class="button" href="{{ url_for('index') }}">Cancelar</a>
+    </div>
+  </form>
+{% endblock %}
