@@ -1,8 +1,7 @@
-from flask_sqlalchemy import SQLAlchemy
-from app import db  # cuidado con imports circulares; alternativa: inicializar db aquí
+# models.py (Corregido)
 
-# Si prefieres separar, haz db = SQLAlchemy() en models y en app hacer db.init_app(app).
-# Para simplicidad usamos el db importado del app principal.
+# **Cambio clave: Importar db desde extensions.py**
+from extensions import db 
 
 class Team(db.Model):
     __tablename__ = 'teams'
