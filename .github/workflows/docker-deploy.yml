@@ -1,7 +1,7 @@
 name: Tag on PR Merge and Push to Docker
 
 on:
-  pull_request:
+  push:
     types: [closed]
     branches: [main]
 
